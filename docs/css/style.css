@@ -6,20 +6,21 @@ body {
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.874);
-    color: #ffffffad;
+    background-color: rgba(0, 0, 0, 0.879);
+    color: #ffffff;
     padding: 3rem;
 }
 
 header h1 {
     margin: 1;
-    color: rgb(225, 225, 255);
+    color: rgb(216, 216, 216);
+    padding: 3px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    color: rgb(225, 225, 255);
+    color: rgb(216, 216, 216);
     border-top: #ccc;
     display: flex;
     flex-direction: row;
@@ -28,24 +29,32 @@ nav ul {
 
 nav li {
     cursor: pointer;
+    padding: 3px;
+    border: solid rgba(0, 0, 0, 0);
+}
+
+nav li:hover {
+    background-color: rgb(65, 96, 77);
+    color: rgb(0, 0, 0);
+    border: ridge rgb(244, 244, 244);
 }
 
 a {
     color: #ccc;
 }
 
+
 #tutorial-container {
     display: flex;
     height: calc(100vh - 60px);
-    background-color: rgb(60, 60, 60);
+    background-color: rgba(0, 0, 0, 0.879);
 
     #instructions {
         width: 46%;
         padding: 1rem;
         overflow-y: auto;
-        text-shadow: rgb(0, 255, 94);
-        color: rgb(225, 225, 255);
-        background-color: rgba(13, 35, 22, 0.589);
+        color: rgb(0, 0, 0);
+        background-color: rgb(65, 96, 77);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: larger
     }
@@ -54,7 +63,8 @@ a {
         flex: 1;
         display: flex;
         flex-direction: column;
-        padding: 1rem;
+        height: 70rem;
+        padding-left: 1rem;
     }
 
     .CodeMirror {
@@ -70,7 +80,7 @@ a {
 
     #output {
         background: rgba(123, 145, 156, 0.952);
-        border: 1px solid #ccc;
+        border: 3.2px solid #223fc476;
         padding: 1rem;
         margin-top: 0.5rem;
         height: 30%;
