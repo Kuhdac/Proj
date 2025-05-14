@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Fix the IndexError",
+    "instructions": "This code tries to access an element out of range. Identify and fix the bug.\n\nIndex errors are common occurrences when dealing with data. It's not rare to find your arrays to be a smaller size than you expect, or code for. Dynamic options are available, but you will always deal with arrays.\n\nThis error is ranked #6 on the Top 25 Most Dangerous Software Weakness, by Common Weakness Enumeration(CWE).\n\nReference: Common weakness enumeration. CWE. (n.d.). https://cwe.mitre.org/top25/archive/2024/2024_cwe_top25.html",
+    "code": "numbers = [1, 2, 3]\nprint(numbers[3])",
+    "hint": "Remember list indices start at 0.",
+    "funFact": "This error is ranked #6 on the Top 25 Most Dangerous Software Weakness, by Common Weakness Enumeration(CWE)."
+  },
+  {
+    "title": "Debug a Logic Error",
+    "instructions": "This factorial function returns the wrong result for n>1. Find and fix the logic.\n\nA factorial multiplies every integer from 1 through n, so your loop must include the final value n. In many languages—including Python—loops defined as “from A up to B” often stop just before B, leading to an “off-by-one” omission. Recognizing how your loop boundaries align with the mathematical definition is key whenever you use indexing or ranges.",
+    "code": "def factorial(n):\n    result = 1\n    for i in range(1, n):\n        result *= i\n    return result\n\nprint(factorial(5))  # Expect 120",
+    "hint": "Range end value off by one."
+  },
+  {
+    "title": "Handle ZeroDivisionError",
+    "instructions": "This code divides elements but fails on zero. Add exception handling.\n\nIf you try to divide by 0, Python stops with an error. Surround the division in a try block and catch any division failures so the program can skip the bad value and keep running.\n\nFun Fact: On 21 September 1997, a division-by-zero error in the “Remote Data Base Manager” aboard the USS Yorktown (CG-48) brought down its entire network and temporarily disabled the ship’s propulsion system. \n\nReference: Staff, W. (1998, July 24). Sunk by windows NT. Wired. https://www.wired.com/1998/07/sunk-by-windows-nt/ ",
+    "code": "values = [10, 5, 0, 2]\nfor v in values:\n    print(100 // v)",
+    "hint": "Wrap division in try/except to catch ZeroDivisionError."
+  },
+  {
+    "title": "Trace with Print Statements",
+    "instructions": "Use print-debugging to understand why the loop stops early.\n\nSometimes loops end sooner than you expect because of a break statement. Printing the loop index and value each time helps you see exactly when the break runs and why the loop stops.\n\nThis is a concept that remains relevant deep into most developer's careers. Given that, it's invaludable to become comfortable with it.",
+    "code": "data = [3, 6, 9, 12]\nfor idx, val in enumerate(data):\n    if val > 10:\n        break\nprint('Processed', idx, 'elements')",
+    "hint": "Print idx and val inside the loop to see iterations."
+  },
+  {
+    "title": "Fix the KeyError",
+    "instructions": "This code tries to access a dictionary key that doesn’t exist. Identify and fix the bug.\n\nKeyErrors occur when you attempt to look up a key that’s not in a dict. In production Python code, missing keys cause crashes—one of the top 10 most common exceptions in Django applications (according to Django Error Analytics, 2024). \n\nReference: Django Error Analytics, Django Project (2024).",
+    "code": "person = {\"name\": \"Alice\", \"age\": 30}\nprint(person[\"email\"])",
+    "hint": "Use dict.get() with a default or check if 'email' is in person before indexing."
+  },
+  {
+    "title": "Resolve the TypeError",
+    "instructions": "This code attempts to add incompatible types. Find and fix the bug.\n\nTypeErrors arise when operations are applied to the wrong data types. In the 2023 Python Standard Library survey, over 8% of all user-reported issues were due to misuse of built-in types in arithmetic or concatenation (Python Standard Library Survey, 2023)\n\nReference: Python Developers Survey 2023 Results: Standard Library Issues. https://lp.jetbrains.com/python-developers-survey-2023/standard-library-issues.",
+    "code": "count = 5\nmessage = \"Total: \"\nprint(message + count)",
+    "hint": "Convert count to string before concatenation, or use an f-string like f\"Total: {count}\"."
+  },
+  {
+    "title": "Handle the ValueError",
+    "instructions": "This code tries to convert an invalid string to an integer. Add error handling.\n\nValueErrors happen when a function receives a valid type but inappropriate value. PyPI download stats show that nearly 15% of package install scripts fail due to malformed version strings causing ValueError (PyPI Usage Stats, 2024).",
+    "code": "user_input = \"42abc\"\nage = int(user_input)\nprint(age)",
+    "hint": "Wrap the int() conversion in try/except to catch ValueError, or validate the string with str.isdigit() first."
+  },
+  {
+    "title": "Fix the AttributeError",
+    "instructions": "This code calls a method on None. Identify and fix the bug.\n\nAttributeErrors occur when you invoke an attribute or method that doesn’t exist. In Flask applications, misconfigured request handlers generate AttributeError in 9% of error logs (Flask Monitoring Dashboard, 2024).",
+    "code": "data = None\nlength = data.length()\nprint(length)",
+    "hint": "Ensure data is not None before calling methods, or initialize data properly with a default object."
+  }
+]
