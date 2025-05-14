@@ -8,29 +8,35 @@ body {
 header {
     background-color: rgba(0, 0, 0, 0.879);
     color: #ffffff;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 header h1 {
     margin: 1;
     color: rgb(216, 216, 216);
-    padding: 3px;
+    padding: 1px;
+    font-size: 40px;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    padding-top: 40px;
     color: rgb(216, 216, 216);
-    border-top: #ccc;
     display: flex;
+    font-weight: 600;
+    flex-wrap: wrap;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
+    text-align: center;
 }
 
 nav li {
     cursor: pointer;
-    padding: 3px;
+    padding: 1px;
     border: solid rgba(0, 0, 0, 0);
+    flex: 0 0 calc(20% - 2rem);
+    box-sizing: border-box;
 }
 
 nav li:hover {
@@ -53,7 +59,8 @@ a {
         width: 46%;
         padding: 1rem;
         overflow-y: auto;
-        color: rgb(0, 0, 0);
+        color: rgb(22, 18, 18);
+        font-weight: 500;
         background-color: rgb(65, 96, 77);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: larger
