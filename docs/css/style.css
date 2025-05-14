@@ -8,34 +8,35 @@ body {
 header {
     background-color: rgba(0, 0, 0, 0.879);
     color: #ffffff;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 header h1 {
     margin: 1;
     color: rgb(216, 216, 216);
-    padding: 1px;
+    padding: 3px;
     font-size: 40px;
     text-align: center;
 }
 
 nav ul {
     list-style: none;
-    padding-top: 40px;
+    padding: 1rem;
     color: rgb(216, 216, 216);
     display: flex;
     font-weight: 600;
+    font-size: large;
     flex-wrap: wrap;
-    flex-direction: row;
-    gap: 1rem;
+    gap: .5rem;
     text-align: center;
+    justify-content: center;
 }
 
 nav li {
     cursor: pointer;
     padding: 1px;
     border: solid rgba(0, 0, 0, 0);
-    flex: 0 0 calc(20% - 2rem);
+    flex: 0 0 calc(33% - 2rem);
     box-sizing: border-box;
 }
 
@@ -52,8 +53,9 @@ a {
 
 #tutorial-container {
     display: flex;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 3px);
     background-color: rgba(0, 0, 0, 0.879);
+    height: fit-content;
 
     #instructions {
         width: 46%;
@@ -61,17 +63,18 @@ a {
         overflow-y: auto;
         color: rgb(22, 18, 18);
         font-weight: 500;
-        background-color: rgb(65, 96, 77);
+        background-color: rgb(94, 125, 106);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: larger
+        font-size: larger;
     }
 
     #editor-container {
         flex: 1;
         display: flex;
         flex-direction: column;
-        height: 70rem;
+        height: 68rem;
         padding-left: 1rem;
+
     }
 
     .CodeMirror {
@@ -83,10 +86,16 @@ a {
     #controls {
         margin-top: 0.5rem;
         align-self: center;
+        display: flex;
+        gap: .75rem;
+
+        .btn {
+            font-weight: 650;
+        }
     }
 
     #output {
-        background: rgba(123, 145, 156, 0.952);
+        background-color: rgba(174, 188, 195, 0.952);
         border: 3.2px solid #223fc476;
         padding: 1rem;
         margin-top: 0.5rem;
